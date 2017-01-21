@@ -1,5 +1,5 @@
 # Gentle-Python
-This folder contains my completed assignments for MIT's Gentle Python course 2.0. 
+This folder contains my completed assignments for MIT's Gentle Python course 2.0.
 
 * MIT's course aims to introduce python at beginner level
 * MIT's course has 11 lessons
