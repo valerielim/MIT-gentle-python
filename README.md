@@ -20,7 +20,7 @@ This folder contains my completed assignments for MIT's Gentle Python course 2.0
 ### Games & Projects
 
 1. Play extended version 'Rock Paper Scissors Lizard Spock'
-2. Zeller's Algorithm, a code that prints the *day* of any given date in history.
+2. Zeller's Date , a code that prints the *day* of any given date in history.
 
 Date begin: 11 Jan 2017
 
