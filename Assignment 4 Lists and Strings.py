@@ -1,0 +1,48 @@
+# Name: Valerie Lim
+# Date: 26 Jan, 2017, Thurs
+# Title: Assignment 4 - Lists and Strings
+# Notes: Taken from Lecture 2 Handouts
+# Exercise 2.7 - 2.10
+
+def sum_all(number_list):
+    # number_list is a list of numbers
+    total = 0
+    for num in number_list:
+        total += num
+
+    return total
+
+# Test cases
+print "sum_all of [4, 3, 6] is:", sum_all([4, 3, 6])
+print "sum_all of [1, 2, 3, 4] is:", sum_all([1, 2, 3, 4])
+
+
+
+##### Exercise 2.7 - Working with lists
+# This function returns the sum of
+# all the cumulative elements before it.
+# therefore the cumulative_sum of [4,3,6]
+# is [4,7,13].
+
+def cumulative_list(oldlist):
+    # oldlist is name of list to be modified
+     index = 0
+     newlist = []
+     while index < len(oldlist):
+          if index == 0:
+               new = oldlist[index]
+          else: 
+               new = oldlist[index] + newlist[index-1]
+          newlist.append(new)
+          index = index + 1
+     return newlist 
+
+# Test cases
+
+print "The cumulative sum of [1,1,1] is", cumulative_list([1,1,1])
+print "The cumulative sum of [2,4,6] is", cumulative_list([2,4,6])
+print "The cumulative sum of [1,2,3] is", cumulative_list([1,2,3])
+
+
+
+##### Exercise 2.8 - Report Card with GPA
