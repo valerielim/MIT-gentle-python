@@ -46,3 +46,30 @@ print "The cumulative sum of [1,2,3] is", cumulative_list([1,2,3])
 
 
 ##### Exercise 2.8 - Report Card with GPA
+# This prints out a report card with the overall GPA stated at the end.
+
+classnum = input("How many classes did you take?")
+output = ["REPORT CARD"]
+GPA = []
+counter = 0
+
+while counter < classnum :
+     classname = raw_input("What is the name of this class?")
+     classgrade = input("What was your grade? (numerical form)")
+     GPA.append(classgrade)        # separate list for GPA calculation
+     newline = str(classname+" - "+str(classgrade))    
+     output.append(newline)        # new line for each subject and grade
+     counter = counter + 1
+print
+print "\n".join(output)
+# calculate GPA
+finalgpa = sum(GPA)/float(len(GPA)) 
+print
+print "Overall GPA: ", finalgpa
+print "Not bad!"
+
+# Note to self:
+# print "\n".join(['I', 'would', 'expect', 'multiple', 'lines'])
+# make this into a function find_gpa() 
+
+
