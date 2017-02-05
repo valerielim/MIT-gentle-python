@@ -73,3 +73,30 @@ print "Not bad!"
 # make this into a function find_gpa() 
 
 
+
+
+
+
+
+##### Exercise 2.9 - Pig Latin Converter
+# Converts a single word to pig latin
+
+def pig_latin(word):
+     str(word)
+     vowels = ["A", "E", "I", "O", "U"]
+     for alphabets in vowels:
+          if word[0] == alphabets:
+               # conversion if word starts with vowel
+               output = word+"HAY"
+          else:
+               # conversion if word does NOT start with vowel
+               output = word[1:]+word[0]+"AY"
+     print str.upper(output) 
+
+# Test cases
+
+print "Boot in pig latin is", pig_latin("boot")
+print "Python in pig latin is", pig_latin("python")
+print "Github in pig latin is", pig_latin("github")
+print "Apple in pig latin is", pig_latin("apple")
+
