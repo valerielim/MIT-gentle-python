@@ -76,22 +76,22 @@ print "Not bad!"
 
 
 
-
-
 ##### Exercise 2.9 - Pig Latin Converter
 # Converts a single word to pig latin
 
-def pig_latin(word):
-     str(word)
-     vowels = ["A", "E", "I", "O", "U"]
-     for alphabets in vowels:
-          if word[0] == alphabets:
-               # conversion if word starts with vowel
-               output = word+"HAY"
-          else:
-               # conversion if word does NOT start with vowel
-               output = word[1:]+word[0]+"AY"
-     print str.upper(output) 
+def pig_latin(word):          # Note: words must be input in inverted commas
+     str.lower(word)
+     vowels =  'aeiou'
+     bonus = ["th", "st", "qu", "pl", "tr"]
+     if word[0] in vowels:
+          # if word starts with vowel
+          output = word+"hay"
+     elif word[:2] in bonus:
+          # if word starts with special combo th, st, qu, etc.
+          output = word[2:]+word[:2]+"ay"
+     else:
+          output = word[1:]+word[0]+"ay"
+     return output
 
 # Test cases
 
