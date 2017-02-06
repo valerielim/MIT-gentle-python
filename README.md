@@ -15,12 +15,12 @@ This folder contains my completed assignments for MIT's Gentle Python course 2.0
 * Class exercise 1 - Printing, Variables, Operators, For & While Loops
 * Assignment 1 - Legal Names, Types, Operators, Conditional Loops, Debugging
 * Readings 2
-* Class Exercise 2 
+* Class Exercise 2 - Loops, If/Else/While, Defining Functions, Logic
 * Assignment 2
 * Readings 3
-* Assignment 3 - String operations, List operations, Logic
+* Assignment 3 - String operations, More Logic, Quadratic formula solvers
 * *no class exercises for this week!*
-* Readings 4 
+* Readings 4 + sample code templates
 * Assignment 4 - Strings, List comprehensions
 
 
