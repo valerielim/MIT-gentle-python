@@ -100,3 +100,56 @@ print "Python in pig latin is", pig_latin("python")
 print "Github in pig latin is", pig_latin("github")
 print "Apple in pig latin is", pig_latin("apple")
 
+
+
+
+
+##### Exercise 2.10 - List Comprehensions
+
+# Qn 1: Write a list comprehension that prints a list of the
+# cubes of the numbers 1 through 10.
+
+cube = [x**3 for x in range(1,11)]
+
+
+
+# Qn 2a: Write a code that prints the output of x random coin flips.
+
+def randomcoin(flips):
+     import random
+     results = 0
+     output = ""
+     while results < flips:
+          coin = random.randint(1, 2)
+          if coin == 1:
+               output = output+"h"
+          else:
+               output = output+"t"
+          results = results + 1
+     print output 
+
+# Possibly useful code that prints out some combinations of X,
+# but not in the way we want. 
+
+import itertools
+
+coinsides = ["h", "t"]
+s = itertools.combinations(coinsides, 3)
+print s
+# result: h, t, ht.
+
+
+# Qn 2b: Write a code that prints ALL possible results of X coin flips.
+# Note: print 'h' for heads, 't' for tails. So "ht" is a possible result.
+
+
+
+# Qn 3: Write a function that takes in a string and uses a list comprehension
+#to return all the vowels in the string.
+
+def find_vowels():
+     sentence = raw_input("What sentence would you like to parse?")
+     vowels = ["a", "e", "i", "o", "u"]
+     output = [x for x in sentence if x in vowels]
+     print output 
+
