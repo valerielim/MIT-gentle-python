@@ -113,7 +113,12 @@ cube = [x**3 for x in range(1,11)]
 
 
 
-# Qn 2a: Write a code that prints the output of x random coin flips.
+# Qn 2: Write a code that prints ALL possible results of X coin flips.
+# Note: print 'h' for heads, 't' for tails. So "ht" is a possible result.
+# Note to self: STUCK ON THIS ONE
+
+# This one produces some combinations of X, but not the type we want.
+# results: h, t, ht, th, tt, hh
 
 def randomcoin(flips):
      import random
@@ -128,19 +133,22 @@ def randomcoin(flips):
           results = results + 1
      print output 
 
-# Possibly useful code that prints out some combinations of X,
-# but not in the way we want. 
+# This one also doesnt produce the combinations of X we want.
+# Shows all combinations, but under the commutative law:
+# result: h, t, ht.
 
 import itertools
 
 coinsides = ["h", "t"]
 s = itertools.combinations(coinsides, 3)
 print s
-# result: h, t, ht.
 
+### Ok final solution time!! THIS ONE WORKS:
 
-# Qn 2b: Write a code that prints ALL possible results of X coin flips.
-# Note: print 'h' for heads, 't' for tails. So "ht" is a possible result.
+coin1 = ["h", "t"]
+coin2 = ["h", "t"]
+output = [x+y for x in coin1 for y in coin2]
+print output 
 
 
 
@@ -152,4 +160,26 @@ def find_vowels():
      vowels = ["a", "e", "i", "o", "u"]
      output = [x for x in sentence if x in vowels]
      print output 
+
+
+
+#Qn 4: Run this list comprehension in your prompt:
+     
+# [x+y for x in [10,20,30] for y in [1,2,3]]
+
+# Figure out what is going on here, and write a
+# nested for loop that gives you the same result.
+# Make sure what is going on makes sense to you!
+
+x = [1,2,3]
+y = [10,20,30]
+
+output = []
+for i in y:
+     for j in x:
+          output.append(i+j)
+print output
+
+### Note to self: expected output = [11, 12, 13, 21, 22, 23, 31, 32, 33]
+# sOLVED :) 
 
