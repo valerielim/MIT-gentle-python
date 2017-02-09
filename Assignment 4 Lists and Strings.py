@@ -183,3 +183,87 @@ print output
 ### Note to self: expected output = [11, 12, 13, 21, 22, 23, 31, 32, 33]
 # sOLVED :) 
 
+
+
+
+# ---------------------
+
+# OPTIONAL QN 1: PIG LATIN SENTENCE TRANSLATOR
+# Completed; see separate doc
+
+
+# ---------------------
+
+# OPTIONAL QN 2.
+ 
+
+##### Qn2.1: Write a function that takes in a list of
+# elements of different types and uses a list comprehension
+# to return all the elements of the list of type int.
+
+# Note: The function isinstance will be of help here. Google “Python
+# isinstance” and see if you can figure out what it does, or
+# type help(isinstance) at the Python shell.
+
+def return_int(items):
+    # items is the list of items to be sorted
+    # category of item returned currently set as integer.
+    index = 0
+    output = []
+    while index < len(items):    
+        if isinstance(items[index], int):
+            output.append(items[index])
+        index = index + 1
+    return ', '.join(str(x) for x in output)    # Note to self: join function is different for integers compared to strings! 
+
+# Test case
+
+print "Sample list 'Messy' contains [[1,2,3], 100, 'apples', 3.333]."
+print "The output for return_int(messy) that returns only integers is", return_int(messy)
+
+
+
+##### Qn2.2: Write a function that solves Y = X**2 + 1
+# for the domain x = -5 to 5, and y = 0 to 10.
+# Your solution should print out a list of [x, y] pairs.
+
+
+### Working notes
+# y = x**2 + 1
+# x in range -5 to 5
+
+# x = (y-1)**0.5
+# y in range 0 to 10
+
+# Extra: As a function that solves y = x**2 + 1
+
+def solve_eqn(y):
+     output = float((y-1)**0.5)
+     return output 
+
+# As a list comprehension:
+
+varX = [float((x-1)**0.5) for x in range(1, 11)]
+varY = [float((y)**2+1) for y in range(-5, 6)] 
+
+# Note: testY calculates the value of Y. where X = -5 to 5.
+# Format: [x, y]
+
+counterX = [a for a in range(-5, 6)]
+testY = [[a, y] for a, y in zip(counterX, varY)]
+
+# Note: testX calculates the value of X. where Y = 0 to 10.
+# Format: [x, y]
+
+counterY = [b for b in range(0, 11)]
+testX = [[x, b] for x, b in zip(varX, counterY)]
+
+# Bonus: To print the list comprehensions NICELY because
+# I truly HATE seeing them as a clump:
+
+def present_nicely(item):
+     # item is the name of the list comprehension
+     index = 0
+     while index < len(item):
+          print item[index]
+          index = index + 1
