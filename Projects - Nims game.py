@@ -1,7 +1,7 @@
 # Name: Valerie Lim
 # Date: 22/1/2017 Sunday
 # Date completed: 23/1/2017 Monday
-# Title: nims.py
+# Title: Nims Game.py
 
 '''
 An interactive two-person game; also known as Stones.
