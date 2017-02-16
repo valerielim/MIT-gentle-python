@@ -1,7 +1,7 @@
 # Name: Valerie Lim
 # Date started; 9/2/2017
-# Date completed:
-# Title: Play Hangman game.py
+# Date completed: 13/2/2017
+# Title: Projects - Hangman.py
 
 
 def make_simple(listname):
