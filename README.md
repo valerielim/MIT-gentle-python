@@ -22,15 +22,16 @@ This folder contains my completed assignments for MIT's Gentle Python course 2.0
 * *no class exercises for this week!*
 * Readings 4
 * Assignment 4 - Strings, List comprehensions
-
+* Readings 5
+* Class Exercise 5 - Mutability, more bugs & a Mystery program
 
 ### Games & Projects
 
 1. 'Rock Paper Scissors Lizard Spock', 2P updated game to 5L.
 1. Zeller's Date , a code that prints the *day* of any given date in history.
 1. Nim's Game, a 2P game where players try to draw the last pebble from a pile of pebbles. 
-1. Pig Latin Transalator. Translates english sentences to pig latin.
-1. Hangman. Includes game, dictionary and *notes* for in-between tests.
+1. Pig Latin Translator: english sentences to pig latin. Compatible with punctuation too.
+1. Hangman. Includes game, dictionary, ASCII graphics and *notes* for in-between tests.
 
 Date begin: 11 Jan 2017
 
