@@ -24,6 +24,7 @@ This folder contains my completed assignments for MIT's Gentle Python course 2.0
 * Assignment 4 - Strings, List comprehensions
 * Readings 5
 * Class Exercise 5 - Mutability, more bugs & a Mystery program
+* Assignment 5 - Dictionaries, more Zellers, more lists
 
 ### Games & Projects
 
