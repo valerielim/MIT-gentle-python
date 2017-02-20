@@ -1,5 +1,6 @@
 # Valerie Lim
 # Date started: 16/2/2017
+# CompleteD: 20/2/2017
 # Title: Assignment 5 Dictionaries
 # Source: Homework 3, Lecture 5. 
 
@@ -93,6 +94,9 @@ YYY = [3,4,2,9]
 Psychmods = {'PL1101' : 'Intro to Psych', 'PL4225' : 'Therapies'}
 
 
+
+
+
 ##### Exercise 3.4 - More about Dictionaries
 
 NAMES = ["Alice", "Bob", "Cathy", "Dan", "Ed", "Frank",
@@ -110,13 +114,14 @@ def combine_lists(lista, listb):
      
 def people(age):
      dic = combine_lists(NAMES, AGES)
-     for i in dic.values():
-          print i
-          while i == age:
-               print "age is", age
-               print "names are:", # find some way to put name here
+     output = []
+     for key, value in dic.iteritems():
+          if int(value) == int(age):
+               output.append(key)
+     return output
 
-# cannot make function print key when given the value
+
+
 
 
 ##### 3.5 - Zeller's Algorithm
@@ -211,7 +216,3 @@ def zellers(month, date, year):
         return "Saturday"
     else:
         return "Sunday"
-
-
-
-        
