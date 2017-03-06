@@ -1,5 +1,6 @@
 # Valerie Lim
 # 2 March 2017
+# Completed: 6 March 2017
 # Class exercise 6
 
 # ------- Chapter 12 -------
