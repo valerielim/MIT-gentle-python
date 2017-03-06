@@ -7,7 +7,18 @@
 ##### Write a function that calculates the distance between two points
      
 class point:
-     pass
+     def __init__(self, x=0, y=0):
+          self.x = x
+          self.y = y
+
+     def __str__(self):
+          return "(" + str(self.x) + "," + str(self.y) + ")"
+          
+     def __add__(self, other):
+          return point(self.x + other.x, self.y + other.y)
+
+     def __sub__(self, other):
+          return point(self.x - other.x, self.y - other.y)
 
 place1 = point()
 place1.x = 0
@@ -73,7 +84,7 @@ time3.seconds = 42
 
 # Print time from class
 def printTime(time):
-     print "Time is", str(time.hours)+":"+str(time.minutes)+":"+str(time.seconds)+"."
+     print str(time.hours)+":"+str(time.minutes)+":"+str(time.seconds)
 
 # Function returns if T2 occurs after T1
 def after(t1, t2):
@@ -96,28 +107,155 @@ def after(t1, t2):
                else:
                     print "T1 and T2 are the same time."
 
-# Converts time in hh:mm:ss into purely seconds
+# Converts Time object (eg. time1) into purely seconds
 def convertToSeconds(t):
   minutes = t.hours * 60 + t.minutes
   seconds = minutes * 60 + t.seconds
   return seconds
 
-# Converts seconds back into time format, hh:mm:ss
+# Converts xxx seconds back into time format, hh:mm:ss
 def makeTime(seconds):
-  time = Time()
+  time = time()
   time.hours = seconds // 3600
   time.minutes = (seconds%3600) // 60
   time.seconds = seconds%60
   return time
 
-# adds two times (eg. 1.5hr and 0:43:30) together
+# adds two times together
 def addTime(t1, t2):
   seconds = convertToSeconds(t1) + convertToSeconds(t2)
   return makeTime(seconds)
 
 # Increments a given time by (x) seconds
-
 def increment(time, seconds): 
      time = convertToSeconds(time)
      newtime = time + seconds
      return makeTime(newtime)
+
+# ------- Chapter 14 -------
+
+# makes "converttoseconds" function from section 13.5 to a method
+# in the Time class.
+
+# Note: class "Time14" is a new class just for messing around stuff in
+# chapter 14! Even though it has same attributes as class "time".
+
+class Time14:
+     def __init__(self, hours=0, minutes = 0, seconds=0):
+          self.hours = hours
+          self.minutes = minutes
+          self.seconds = seconds
+          
+     def printTime(time):
+          print str(time.hours) + ":" +  \
+               str(time.minutes) + ":" +  \
+               str(time.seconds)
+
+     def convertToSeconds(self):
+          minutes = self.hours * 60 + self.minutes
+          seconds = minutes * 60 + self.seconds
+          return seconds
+
+     def increment(self, seconds):
+          self.seconds = seconds + self.seconds
+          while self.seconds >= 60: 
+               self.seconds = self.seconds - 60 
+               self.minutes = self.minutes + 1 
+          while self.minutes >= 60: 
+               self.minutes = self.minutes - 60 
+               self.hours = self.hours + 1
+          return printTime(self)
+
+     # function "after" takes 2 times, prints answer if
+     # one time is less than/comes before the other.
+
+     # E.g., t1 = 10:00:00
+     # E.g., t2 = 10:00:01
+     # It will print "the bread is done" if t2 > t1.
+     
+     def after(self, time2):
+          if self.hours > time2.hours:
+                result = 1
+          elif self.hours < time2.hours:
+               result = 0
+          else:
+               if self.minutes > time2.minutes:
+                    result = 1
+               elif self.minutes < time2.minutes:
+                    result = 0
+               else:
+                    if self.seconds > time2.seconds:
+                         result = 1
+                    else:
+                         result = 0
+          if result == 0:
+               print "The bread is done."
+          else:
+               print "The bread is not done yet."
+
+# Test case
+
+currentTime = Time14()
+currentTime.hours = 17
+currentTime.minutes = 23
+currentTime.seconds = 01
+
+doneTime = Time14()
+doneTime.hours = 17
+doneTime.minutes = 23
+doneTime.seconds = 03
+
+# Ex 14.5
+# Qn: "Add a fourth parameter to the "FIND" function,
+# that specifies where to stop looking.
+
+#### PS: The defaultvalue of 'end' should be len(str),
+# but that won't work here. This is because the default
+# values are evaluated when the function is defined, not
+# when it is called. When FIND is defined, 'str' doesn't
+# exist yet, so you can't find its length.)
+
+#### PPS: To me, I interpret this as two requirements:
+#    1. To let the user define their own end
+#    2. If their end is not specified, default to searching whole word
+
+
+def find(str, ch, start=0, end=0):
+     index = start
+     if end == 0:
+          end = end + len(str)
+     elif end > len(str):
+          print "Invalid end position defined." 
+     else:
+          end = end
+     while index < end: 
+          if str[index] == ch: 
+               return index 
+          index = index + 1 
+     return -1    # aka, "not found"
+
+# Ex 14.6
+# Create a new operator "subtraction" or "sub"
+# that overloads the subtraction operator, and try it out.
+
+class Point:
+     def __init__(self, x=0, y=0):
+          self.x = x
+          self.y = y
+
+     def __str__(self):
+          return "(" + str(self.x) + "," + str(self.y) + ")"
+          
+     def __add__(self, other):
+          return point(self.x + other.x, self.y + other.y)
+
+     def __sub__(self, other):
+          return point(self.x - other.x, self.y - other.y)
+
+     def __rmul__(self, other):
+          return point(other * self.x, other * self.y)
+     
+p1 = Point(1,1)
+p2 = Point(2,2)
+p3 = Point(3,5)
+
