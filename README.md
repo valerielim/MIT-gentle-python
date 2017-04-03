@@ -28,7 +28,7 @@ Source: [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-sc
 * Class Exercise 5 - Mutability, more bugs & a Mystery program
 * Class Exercise 6 - Classes, Objects
 * Class Exercise 7 - Inheritance
-* *No class eercises for week 8!*
+* *No class exercises for week 8!*
 
 ### Completed Assignments
 
