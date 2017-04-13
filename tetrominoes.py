@@ -3,6 +3,8 @@
 # Homework 8 -- Ex 4.3.1
 # Title: tetrominoes.py
 
+# Updated: 13 April 2017
+
 from graphics import *
 
 
@@ -60,9 +62,68 @@ class I_shape(Shape):
             Point(center.x + 1, center.y)]
         Shape.__init__(self, coords, "blue")
 
-# To create a 4-cube-shaped tetromino, call this: 
-win = GraphWin("Tetrominoes", 200, 150)
-shape = I_shape(Point(3, 1))
-shape.draw(win)
-win.mainloop()
 
+# To test create a 4-cube-shaped tetromino, uncomment this: 
+# win = GraphWin("Tetrominoes", 200, 150)
+# shape = R_shape(Point(3, 1))
+# shape.draw(win)
+# win.mainloop()
+
+# Other Tetromino Shapes
+class J_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x - 1, center.y),
+            Point(center.x, center.y),
+            Point(center.x + 1, center.y),
+            Point(center.x + 1, center.y + 1)]
+        Shape.__init__(self, coords, "orange")
+
+class L_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x - 1, center.y + 1),
+            Point(center.x - 1, center.y),
+            Point(center.x, center.y),
+            Point(center.x + 1, center.y)]
+        Shape.__init__(self, coords, "light blue")
+
+class O_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x - 1, center.y),
+            Point(center.x - 1, center.y + 1),
+            Point(center.x, center.y),
+            Point(center.x, center.y + 1)]
+        Shape.__init__(self, coords, "red")
+
+class S_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x + 1, center.y),
+            Point(center.x, center.y),
+            Point(center.x, center.y + 1),
+            Point(center.x - 1, center.y + 1)]
+        Shape.__init__(self, coords, "green")
+
+class T_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x, center.y + 1),
+            Point(center.x - 1, center.y),
+            Point(center.x, center.y),
+            Point(center.x + 1, center.y)]
+        Shape.__init__(self, coords, "yellow")
+
+class Z_shape(Shape):
+    def __init__(self, center):
+        coords = [Point(center.x, center.y + 1),
+            Point(center.x - 1, center.y),
+            Point(center.x, center.y),
+            Point(center.x + 1, center.y + 1)]
+        Shape.__init__(self, coords, "pink")
+
+# To print all
+
+win = GraphWin("Tetrominoes", 900, 150)
+tetrominoes = [I_shape, J_shape, L_shape, O_shape, S_shape, T_shape, Z_shape]
+x = 3
+for tetromino in tetrominoes:
+    shape = tetromino(Point(x, 1))
+    shape.draw(win)
+    x += 4
