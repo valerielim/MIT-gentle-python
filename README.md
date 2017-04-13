@@ -1,8 +1,8 @@
 # MIT Gentle-Python
 
-Complete solutions & annotations to MIT's "Gentle Introduction to Programming using Python" course version 2.0 (2011).
+Complete solutions & annotations to MIT's "Gentle Introduction to Programming using Python (6.189)" course version 2.0 (2011).
 
-All work here is original and my own. Answers have been verified based on lecture notes' expectations of output for each question, and are correct. Test cases are also included.
+All work here is original and my own. Output have been verified based on lecture notes for each question. Test cases are also included.
  
  *Note: Not all weeks have class exercises or assignments.*
 
@@ -18,7 +18,7 @@ Source: [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-sc
 1. Week 6: Classes & Objects
 1. Week 7: Classes & Functions
 1. Week 8: Classes & Methods + Conway's Game of Life
-1. Week 9: Inheritance + final project time
+1. Week 9: Inheritance + final project time (Project: Tetris)
 
 ### Completed Exercises
 
@@ -37,7 +37,7 @@ Source: [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-sc
 * Assignment 3 - String operations, More Logic, Quadratic formula solvers
 * Assignment 4 - Strings, List comprehensions
 * Assignment 5 - Dictionaries, more Zellers, more lists
-* *No homework assignments for week 7!*
+* *No homework assignments for week 6 & 7!*
 * Assignment 8 - Objects, Graphics
 
 ### Side Projects
@@ -48,3 +48,6 @@ Source: [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-sc
 1. Pig Latin Translator: english sentences to pig latin. Compatible with punctuation too.
 1. Hangman. Includes game, dictionary, ASCII graphics and *notes* for in-between tests.
 1. Animated a moving car! 
+1. Made tetris *whoohoooo not bad for a noob like me*
+
+![alt text](http://i.imgur.com/FEUjyjp.jpg)
