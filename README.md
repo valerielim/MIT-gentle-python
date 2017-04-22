@@ -48,6 +48,6 @@ Source: [MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-sc
 1. Pig Latin Translator: english sentences to pig latin. Compatible with punctuation too.
 1. Hangman. Includes game, dictionary, ASCII graphics and *notes* for in-between tests.
 1. Animated a moving car! 
-1. Made tetris *whoohoooo not bad for a noob like me*
+1. Made tetris game
 
 ![alt text](http://i.imgur.com/FEUjyjp.jpg)
