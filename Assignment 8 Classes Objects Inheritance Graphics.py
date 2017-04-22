@@ -210,3 +210,7 @@ for tetromino in tetrominoes:
     shape = tetromino(Point(x, 1))
     shape.draw(win)
     x += 4
+
+    
+# FINAL NOTES
+# To see Teteris game, see 'Tetrominoes.py' file 
